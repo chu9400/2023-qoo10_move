@@ -1,0 +1,30 @@
+:root {
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "nanumSquareNeo";
+    --mainNum-font: "gmarket";
+  
+    --mainBg-color: #fff;
+
+    --white: #fff;
+    --black: #000;
+  
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    font-synthesis: none;               //브라우저 자체 글꼴 합성 해제.
+    text-rendering: optimizeLegibility; // 텍스트 렌더링 최적화
+    -webkit-font-smoothing: antialiased; // 텍스트 테두리를 부드럽게
+    -moz-osx-font-smoothing: grayscale; // mac에서 텍스트 테두리를 회색으로 처리하여 부드럽게
+    -webkit-text-size-adjust: 100%;     // 브라우저에서 화면 확대나 축소에 따라 크기를 일정하게.
+  
+    @media (max-width: 800px) {
+        font-size: 14px;
+        line-height: 1;
+    }
+}
+  
+body {
+    background-color: var(--mainBg-color);
+}
