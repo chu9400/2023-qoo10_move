@@ -49,9 +49,9 @@
 <style lang="scss">
 
 .pi__wrap {
-    background-color: #333;
+    background-color: #fff;
     width: 100%;
-    height: 500px;
+    height: auto;
     box-sizing: border-box;
 }
 
@@ -62,30 +62,66 @@
     max-width: 1440px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    box-sizing: border-box;
+
+    @media(max-width:1080px){
+        flex-direction: column
+    }
 
     .pi__header {
-        width: 70%;
+        width: 60%;
+        max-width: 780px;
+
+        @media(max-width:1080px){
+            width: 100%;
+        }
+
+        .pi__title {
+            font-size: 2rem;
+            margin: 25px 0;
+            font-weight: 700;
+        }
+
+        .pi__desc {
+            font-size: 0.9rem;
+            line-height: 1.8;
+
+            @media(max-width:1080px){
+                margin-bottom: 10vh;
+            }
+        }
     }
 
     .pi__data {
-        width: 30%;
+        width: 40%;
+        max-width: 450px;
         display: flex;
-        flex-wrap: wrap;        
+        align-items: flex-end;
+        flex-wrap: wrap; 
+        
+        @media(max-width:1080px){
+            width: 100%;
+            max-width: 100%;
+        }
 
         .pi__data__list {
             background-color: #fff;
             width: 50%;
-            /* 여기에 플레스줄까? */
             
 
             dl {
-                
+                width: 100%;
+             
+                @media(max-width:1080px){
+                    margin-bottom: 1vh;
+                }
+
+                dt {
+                    margin-bottom: 1vh;
+                    font-weight: 700;
+                }
             }
         }
-
-        
-
     }
 }
 </style>
