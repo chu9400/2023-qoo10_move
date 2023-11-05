@@ -2,7 +2,7 @@
     <header id="header">
         <div class="nullDiv"></div>
         <div class="video__inner">
-            <video muted loop> <!-- autoplay -->
+            <video muted loop autoplay> <!-- autoplay -->
                 <source src="https://www.cttd.co.kr/_nuxt/qoo10_move_pc.6465939e.mp4" type="video/mp4" width>
             </video>
         </div>
