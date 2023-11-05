@@ -84,6 +84,12 @@ img {
     width: 100%;
 }
 
+// 이미지 설명 숨기기
+figcaption {
+    position: absolute;
+    left: -9999px;
+}
+
 // 스킵메뉴
 #skip a {
     position: absolute;

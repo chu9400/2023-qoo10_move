@@ -28,3 +28,20 @@
 body {
     background-color: var(--mainBg-color);
 }
+
+
+// 콘텐츠01 이미지 공통 스타일
+@mixin cont01-img-style($width, $left, $margin-top, $radius) {
+    
+    width: $width;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: $left;
+    margin-top: $margin-top;
+
+    img {
+        max-width: 100%;
+        border-radius: $radius;
+    }
+}
