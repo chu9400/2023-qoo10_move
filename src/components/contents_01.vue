@@ -13,41 +13,42 @@
                 </figure>
             </div>
 
-            <div class="ct__img__02 reveal">
+            <div class="ct__img__02 reveal growBig">
                 <figure>
                     <img :src="contData01[1]" alt="콘텐츠 이미지 02">
                     <figcaption>콘텐츠 이미지 02</figcaption>
                 </figure>
             </div>
 
-            <div class="ct__img__03 reveal">
+            <div class="ct__img__03 reveal growBig">
                 <figure>
                     <img :src="contData01[2]" alt="콘텐츠 이미지 03">
                     <figcaption>콘텐츠 이미지 03</figcaption>
                 </figure>
             </div>
 
-            <div class="ct__img__04 reveal">
+            <div class="ct__img__04 reveal growBig">
                 <figure>
                     <img :src="contData01[3]" alt="콘텐츠 이미지 04">
                     <figcaption>콘텐츠 이미지 04</figcaption>
                 </figure>
             </div>
 
-            <div class="ct__img__05 reveal">
+            <div class="ct__img__05 reveal growBig">
                 <figure>
                     <img :src="contData01[4]" alt="콘텐츠 이미지 05">
                     <figcaption>콘텐츠 이미지 05</figcaption>
                 </figure>
             </div>
 
-            <div class="ct__img__06 reveal">
+            <div class="ct__img__06 reveal growBig">
                 <figure>
                     <img :src="contData01[5]" alt="콘텐츠 이미지 06">
                     <figcaption>콘텐츠 이미지 06</figcaption>
                 </figure>
             </div>
-            <div class="ct__img__07 reveal">
+
+            <div class="ct__img__07 reveal growBig">
                 <figure>
                     <img :src="contData01[6]" alt="콘텐츠 이미지 07">
                     <figcaption>콘텐츠 이미지 07</figcaption>
@@ -114,7 +115,6 @@ export default {
             });
 
             gsap.from(".ct__img__07", {
-                /* autoAlpha:0, */
                 x: -200,
                 scrollTrigger: {
                     trigger: ".ct__img__07",
@@ -124,6 +124,16 @@ export default {
                     scrub:1,
                 }
             });
+
+            const growBigImg = document.querySelectorAll(".growBig");
+            growBigImg.forEach( img => {
+                img.addEventListener("mouseover", () => {
+                    gsap.to(img, { scale: 1.05 });
+                });
+                img.addEventListener("mouseleave", () => {
+                    gsap.to(img, { scale: 1 });
+                });
+            })
 
         }
     }
@@ -207,6 +217,6 @@ export default {
         }
     }
 
-    
+
 }
 </style>
