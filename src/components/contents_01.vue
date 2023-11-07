@@ -140,6 +140,10 @@ export default {
     height: 2200px;
     background: url("@/assets/img/contents_01_bg.jpg") no-repeat center / cover;
     overflow: hidden;
+
+    @media(max-width: 800px) {
+            height: 2100px;
+        }
 }
 
 .contents__01__inner {
@@ -150,18 +154,34 @@ export default {
 
     .ct__img__01 {      
         @include cont01-img-style(25%, 20%, 14%, 20px);// $width, $left, $margin-top, $border-radius
+
+        @media(max-width: 800px) {
+            @include cont01-img-style(40%, 10%, 20%, 20px);
+        }
     }
 
     .ct__img__02 {
-        @include cont01-img-style(25%, 52%, 70%, 20px);
+        @include cont01-img-style(25%, 50%, 70%, 20px);
+
+        @media(max-width: 800px) {
+            @include cont01-img-style(40%, 43%, 138%, 20px);
+        }
     }
 
     .ct__img__03 {
         @include cont01-img-style(16%, 36%, 24.5%, 15px);
+        
+        @media(max-width: 800px) {
+            @include cont01-img-style(25%, 35%, 37%, 15px);
+        }
     }
 
     .ct__img__04 {
         @include cont01-img-style(18%, 54%, 16%, 15px);
+
+        @media(max-width: 800px) {
+            @include cont01-img-style(30%, 63%, 23%, 15px);
+        }
     }
 
     .ct__img__05 {
@@ -180,7 +200,11 @@ export default {
         }
     }
     .ct__img__07 {
-        @include cont01-img-style(27%, 5%, 63%, 0px);
+        @include cont01-img-style(27%, 1%, 65%, 0px);
+
+        @media(max-width: 800px) {
+            @include cont01-img-style(63%, -5%, 165%, 0px);
+        }
     }
 
     
