@@ -116,7 +116,7 @@
 .contents__03__inner {
     width: 100%;
     position: relative;
-    padding-top: 130%;
+    padding-top: 135%;
 
     @media(max-width: 800px) {
         padding-top: 370%;
@@ -140,7 +140,10 @@
 
         @media(max-width: 800px) {
             @include cont01-img-style(30%, 62%, 15%, 20px);
-            transform: scaleX(-1);
+            
+            figure {
+                transform: scaleX(-1);
+            }
         }
     }
 

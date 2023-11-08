@@ -5,6 +5,8 @@
   import contents_01 from "@/components/contents_01.vue";
   import contents_02 from "@/components/contents_02.vue";
   import contents_03 from "@/components/contents_03.vue";
+  import contents_04 from "@/components/contents_04.vue";
+  import contents_05 from "@/components/contents_05.vue";
 </script>
 
 <template>
@@ -16,6 +18,8 @@
     <contents_01 />
     <contents_02 />
     <contents_03 />
+    <contents_04 />
+    <contents_05 />
   </main>
 
 </template>

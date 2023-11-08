@@ -57,3 +57,43 @@ export const contData03 = [
     contImg_03_00_mobile,
     contImg_03_03_mobile,
 ];
+
+
+/* contImg_04 */
+import contImg_04_00 from "../assets/img/cont04/contents_04_00.jpg";
+import contImg_04_01 from "../assets/img/cont04/contents_04_01.jpg";
+import contImg_04_02 from "../assets/img/cont04/contents_04_02.jpg";
+import contImg_04_03 from "../assets/img/cont04/contents_04_03.jpg";
+import contents_04_heart from "../assets/img/cont04/contents_04_heart.png";
+import contents_04_like_00 from "../assets/img/cont04/contents_04_like_00.png";
+import contents_04_like_01 from "../assets/img/cont04/contents_04_like_01.png";
+import contents_04_like_02 from "../assets/img/cont04/contents_04_like_02.png";
+
+export const contData04 = [
+    contImg_04_00,   
+    contImg_04_01,   
+    contImg_04_02,   
+    contImg_04_03,   
+    contents_04_heart,
+    contents_04_like_00,
+    contents_04_like_01,
+    contents_04_like_02,
+
+];
+
+
+/* contImg_05 */
+import contImg_05_00 from "../assets/img/cont05/contents_05_00.jpg";
+import contImg_05_01 from "../assets/img/cont05/contents_05_01.jpg";
+import contImg_05_02 from "../assets/img/cont05/contents_05_02.jpg";
+import contImg_05_03 from "../assets/img/cont05/contents_05_03.png";
+import contImg_05_04 from "../assets/img/cont05/contents_05_04.png";
+
+export const contData05 = [
+    contImg_05_00,   
+    contImg_05_01,   
+    contImg_05_02,   
+    contImg_05_03,   
+    contImg_05_04,   
+
+];
