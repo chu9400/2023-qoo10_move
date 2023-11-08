@@ -3,6 +3,8 @@
   import Header from "@/components/Header.vue";
   import ProjectInfo from "@/components/ProjectInfo.vue";
   import contents_01 from "@/components/contents_01.vue";
+  import contents_02 from "@/components/contents_02.vue";
+  import contents_03 from "@/components/contents_03.vue";
 </script>
 
 <template>
@@ -12,6 +14,8 @@
   <main id="main" role="main">
     <ProjectInfo />
     <contents_01 />
+    <contents_02 />
+    <contents_03 />
   </main>
 
 </template>
@@ -21,6 +25,7 @@
 #main {
   max-width: 1920px;
   position: relative;
+  overflow: hidden;
 }
 
 </style>

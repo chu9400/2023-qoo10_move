@@ -1,14 +1,12 @@
 :root {
-    --mainEng-font: "Montserrat";
-    --mainKor-font: "nanumSquareNeo";
-    --mainNum-font: "gmarket";
-  
+    --main-font: "inter tight";
+
     --mainBg-color: #fff;
 
     --white: #fff;
     --black: #000;
   
-    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-family: var(--main-font);
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;

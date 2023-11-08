@@ -147,20 +147,18 @@ export default {
 
 .contents__01__wrap {
     width: 100%;
-    height: 2200px;
     background: url("@/assets/img/contents_01_bg.jpg") no-repeat center / cover;
     overflow: hidden;
-
-    @media(max-width: 800px) {
-            height: 2100px;
-        }
 }
 
 .contents__01__inner {
     max-width: 100%;
+    padding-top: 130%; //height 값 조정
     position: relative;
 
-    /* 각 이미지마다 반응형 일때 max-wdith 값 조정 */
+    @media(max-width: 800px) {
+        padding-top: 300%; 
+    }
 
     .ct__img__01 {      
         @include cont01-img-style(25%, 20%, 14%, 20px);// $width, $left, $margin-top, $border-radius
@@ -210,7 +208,7 @@ export default {
         }
     }
     .ct__img__07 {
-        @include cont01-img-style(27%, 1%, 65%, 0px);
+        @include cont01-img-style(27%, 1%, 70%, 0px);
 
         @media(max-width: 800px) {
             @include cont01-img-style(63%, -5%, 165%, 0px);
