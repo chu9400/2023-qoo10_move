@@ -94,20 +94,20 @@
 .contents__02__wrap {
     width: 100%;
     background: url("@/assets/img/contents_02_bg.jpg") no-repeat center / cover;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .contents__02__inner {
     width: 100%;
     position: relative;
-    padding-top: 87%;
+    padding-top: 75.62%;
 
     @media(max-width: 800px) {
         padding-top: 200%;
     }
     
     .ct__img__02_01 {      
-        @include cont01-img-style(30%, 7%, 14%, 20px);// $width, $left, $margin-top, $border-radius
+        @include cont01-img-style(25%, 10%, 14%, 20px);// $width, $left, $margin-top, $border-radius
         box-shadow: 0 30px 70px #5f5f5f66;
         position: absolute;
         top: 0;
@@ -120,7 +120,7 @@
 
     
      .ct__img__02_02 {
-        @include cont01-img-style(33%, 47%, 24.5%, 0px);
+        @include cont01-img-style(27%, 43%, 24.5%, 0px);
         position: absolute;
         top: 0;
 
@@ -132,7 +132,7 @@
 
 
     .ct__img__02_03 {
-        @include cont01-img-style(20%, 85%, 10%, 15px);
+        @include cont01-img-style(20%, 75%, 10%, 15px);
         position: absolute;
         top: 0;
         

@@ -34,3 +34,26 @@ export const contData02 = [
     contImg_02_03
 ];
 
+
+/* contImg_03 */
+import contImg_03_00 from "../assets/img/contents_03_00.jpg";
+import contImg_03_01 from "../assets/img/contents_03_01.jpg";
+import contImg_03_02 from "../assets/img/contents_03_02.jpg";
+import contImg_03_03 from "../assets/img/contents_03_03.jpg";
+import contImg_03_04 from "../assets/img/contents_03_04.jpg";
+import contImg_03_05 from "../assets/img/contents_03_05.jpg";
+import contImg_03_06 from "../assets/img/contents_03_06.png";
+import contImg_03_00_mobile from "../assets/img/contImg_03_00_mobile.jpg";
+import contImg_03_03_mobile from "../assets/img/contImg_03_03_mobile.jpg";
+
+export const contData03 = [
+    contImg_03_00,    
+    contImg_03_01,
+    contImg_03_02,
+    contImg_03_03,
+    contImg_03_04,
+    contImg_03_05,
+    contImg_03_06,
+    contImg_03_00_mobile,
+    contImg_03_03_mobile,
+];

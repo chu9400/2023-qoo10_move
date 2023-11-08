@@ -169,7 +169,7 @@ export default {
     }
 
     .ct__img__02 {
-        @include cont01-img-style(25%, 50%, 70%, 20px);
+        @include cont01-img-style(22%, 50%, 75%, 20px);
 
         @media(max-width: 800px) {
             @include cont01-img-style(40%, 43%, 138%, 20px);
