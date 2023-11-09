@@ -6,7 +6,7 @@
 
 
 ## 완성작 보기 
-미리보기 : 
+https://chu9400-qoo10move.netlify.app/
 
 ## 사용 기술 스택
 - vue(https://ko.vuejs.org/) 를 사용하여 사이트를 번들링하고 관리합니다.
