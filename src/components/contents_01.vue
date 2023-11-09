@@ -1,11 +1,5 @@
 <script setup>
     import {contData01} from "../constants/index.js";
-    /* 
-        1. 공통 스타일 mixin 이름 수정. 클리어
-        2. 이미지 폴더 각각 cont01 만들기. 
-        3. 각 이미지들 시작번호 00으로 통일.
-        4. 이미지 호버시 스케일 크게 할 건지 고민.
-    */
 </script>
 
 <template>
