@@ -1,17 +1,24 @@
 <script setup>
     import {contData01} from "../constants/index.js";
-    
+    /* 
+        1. 공통 스타일 mixin 이름 수정. 클리어
+        2. 이미지 폴더 각각 cont01 만들기. 
+        3. 각 이미지들 시작번호 00으로 통일.
+        4. 이미지 호버시 스케일 크게 할 건지 고민.
+    */
 </script>
 
 <template>
     <section id="contents__01" class="contents__01__wrap">
         <div class="contents__01__inner">
             <div class="ct__img__01 reveal">
-                <figure>
-                    <img :src="contData01[0]" alt="콘텐츠 이미지 01">
-                    <figcaption>콘텐츠 이미지 01</figcaption>
-                </figure>
+                <picture>
+                <source media="(max-width: 800px)" :srcset="contData01[7]">
+                <img :src="contData01[0]" alt="콘텐츠 이미지 01">
+            </picture>
             </div>
+
+            
 
             <div class="ct__img__02 reveal growBig">
                 <figure>
@@ -94,7 +101,7 @@ export default {
                     scrollTrigger: {
                     trigger: elementClass,
                     start: "top bottom",
-                    end: "bottom bottom",
+                    end: "+=500",
                     markers: false,
                     scrub:1,
                     
@@ -103,7 +110,7 @@ export default {
             });
 
             gsap.from(".ct__img__02", {
-                /* autoAlpha:0, */
+                autoAlpha:0,
                 y: 100,
                 scrollTrigger: {
                     trigger: ".ct__img__02",
@@ -115,6 +122,7 @@ export default {
             });
 
             gsap.from(".ct__img__07", {
+                autoAlpha:0,
                 x: -200,
                 scrollTrigger: {
                     trigger: ".ct__img__07",
@@ -128,7 +136,7 @@ export default {
             const growBigImg = document.querySelectorAll(".growBig");
             growBigImg.forEach( img => {
                 img.addEventListener("mouseover", () => {
-                    gsap.to(img, { scale: 1.05 });
+                    gsap.to(img, { scale: 1.015 });
                 });
                 img.addEventListener("mouseleave", () => {
                     gsap.to(img, { scale: 1 });
@@ -147,7 +155,7 @@ export default {
 
 .contents__01__wrap {
     width: 100%;
-    background: url("@/assets/img/contents_01_bg.jpg") no-repeat center / cover;
+    background: url("@/assets/img/cont01/contents_01_bg.jpg") no-repeat center / cover;
     overflow: hidden;
 }
 
@@ -161,39 +169,39 @@ export default {
     }
 
     .ct__img__01 {      
-        @include cont01-img-style(25%, 20%, 14%, 20px);// $width, $left, $margin-top, $border-radius
+        @include common-img-style(25%, 20%, 14%, 20px);// $width, $left, $margin-top, $border-radius
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 10%, 20%, 20px);
+            @include common-img-style(45%, 10%, 20%, 20px);
         }
     }
 
     .ct__img__02 {
-        @include cont01-img-style(22%, 50%, 75%, 20px);
+        @include common-img-style(22%, 50%, 75%, 20px);
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 43%, 138%, 20px);
+            @include common-img-style(50%, 45%, 126%, 20px);
         }
     }
 
     .ct__img__03 {
-        @include cont01-img-style(16%, 36%, 24.5%, 15px);
+        @include common-img-style(16%, 36%, 24.5%, 15px);
         
         @media(max-width: 800px) {
-            @include cont01-img-style(25%, 35%, 37%, 15px);
+            @include common-img-style(29%, 38.7%, 39.5%, 5px);
         }
     }
 
     .ct__img__04 {
-        @include cont01-img-style(18%, 54%, 16%, 15px);
+        @include common-img-style(18%, 54%, 16%, 15px);
 
         @media(max-width: 800px) {
-            @include cont01-img-style(30%, 63%, 23%, 15px);
+            @include common-img-style(35%, 71%, 23%, 15px);
         }
     }
 
     .ct__img__05 {
-        @include cont01-img-style(11%, 76%, 35%, 15px);
+        @include common-img-style(11%, 76%, 35%, 15px);
 
         @media(max-width: 800px) {
             display: none;
@@ -201,17 +209,17 @@ export default {
     }
 
     .ct__img__06 {
-        @include cont01-img-style(10%, 90%, 25%, 15px);
+        @include common-img-style(10%, 90%, 25%, 15px);
         
         @media(max-width: 800px) {
             display: none;
         }
     }
     .ct__img__07 {
-        @include cont01-img-style(27%, 1%, 70%, 0px);
+        @include common-img-style(27%, 5%, 70%, 0px);
 
         @media(max-width: 800px) {
-            @include cont01-img-style(63%, -5%, 165%, 0px);
+            @include common-img-style(63%, -5%, 165%, 0px);
         }
     }
 

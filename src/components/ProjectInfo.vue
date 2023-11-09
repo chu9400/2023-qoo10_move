@@ -2,7 +2,7 @@
     <section id="ProjectInfo" class="pi__wrap">
 
         <div class="pi__inner">
-            <div class="pi__header">
+            <div class="pi_left">
                 <h2 class="pi__title">새로운 패션 플랫폼 큐텐 무브</h2>
                 <p class="pi__desc">
                     비디오 기반의 플랫폼을 구축하고 큐레이션을 통해 브랜드 경험을 제공함으로써 상품 구매와도 연계되는 선순환 구조를 이룹니다. <br />
@@ -12,39 +12,61 @@
                 </p>
             </div>
 
-            <div class="pi__data">
-                <div class="pi__data__list">
-                    <dl>
-                        <dt>clien</dt>
-                        <dd>qoo10</dd>
-                    </dl>
-                </div>
-                <div class="pi__data__list">
-                    <dl>
-                        <dt>division</dt>
-                        <dd>ux consulting / design</dd>
-                    </dl>
-                </div>
-                <div class="pi__data__list">
-                    <dl>
-                        <dt>launch</dt>
-                        <dd>2022.04</dd>
-                    </dl>
-                </div>
-                <div class="pi__data__list">
-                    <dl>
-                        <dt>url</dt>
-                        <dd>
-                            <a href="www.qoo10.jp" target="_blank" rel="noreferrer noopener">www.qoo10.jp</a>
-                        </dd>
-                    </dl>
-                </div>
+            <div class="pi_right">
+                <dl>
+                    <dt>client</dt>
+                    <dd>qoo10</dd>
+                </dl>
+                <dl>
+                    <dt>division</dt>
+                    <dd>ux consulting / design</dd>
+                </dl>
+                <dl>
+                    <dt>launch</dt>
+                    <dd>2022.04</dd>
+                </dl>
+                <dl>
+                    <dt>url</dt>
+                    <dd>
+                        <a href="https://www.qoo10.jp/" target="_blank" rel="noopener" title="open in new tab" >www.qoo10.jp</a>
+                    </dd>
+                </dl>
             </div>
 
         </div>
         
     </section>
 </template>
+
+<script>
+    import gsap from "gsap";
+    import ScrollTrigger from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    export default {
+        mounted : function() {
+            this.animation00();
+        },
+        methods: {
+            animation00() {
+
+                gsap.from(".pi__inner", { 
+                    y : 50,
+                    autoAlpha:0,
+                    scrollTrigger: {
+                    trigger: ".pi_left",
+                    start: "top bottom",
+                    end: "+=500px",                    
+                    scrub: 1,
+                    }
+                });
+               
+            }
+        }
+    }
+    
+</script>
+
 
 <style lang="scss">
 
@@ -60,68 +82,76 @@
     padding: 150px 50px;
     margin: 0 auto;
     max-width: 1440px;
+    box-sizing: border-box;    
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
 
-    @media(max-width:1080px){
-        flex-direction: column
+    @media(max-width: 1200px) {
+        padding: 120px 50px;
+        flex-direction: column;
     }
 
-    .pi__header {
-        width: 60%;
-        max-width: 780px;
+    .pi_left {
+        min-width: 780px;
+        font-size: 18px;
+        letter-spacing: -.05em;
 
-        @media(max-width:1080px){
-            width: 100%;
+        @media(max-width: 1200px) {
+            min-width: 100%;
+            margin-bottom: 5vh;
+        }
+
+        @media(max-width: 480px) {
+            font-size: 14px;
         }
 
         .pi__title {
-            font-size: 2rem;
-            margin: 25px 0;
-            font-weight: 700;
+            margin-bottom: 2vh;
+            font-weight: 900;
+            transform : rotate(0.04deg); 
         }
 
         .pi__desc {
-            font-size: 0.9rem;
-            line-height: 1.8;
-
-            @media(max-width:1080px){
-                margin-bottom: 10vh;
-            }
-        }
-    }
-
-    .pi__data {
-        width: 40%;
-        max-width: 450px;
-        display: flex;
-        align-items: flex-end;
-        flex-wrap: wrap; 
-        
-        @media(max-width:1080px){
             width: 100%;
-            max-width: 100%;
-        }
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: -.05em;
+            line-height: 26px;
+            transform : rotate(0.04deg); 
+            word-break: keep-all;
 
-        .pi__data__list {
-            background-color: #fff;
-            width: 50%;
-            
-
-            dl {
-                width: 100%;
-             
-                @media(max-width:1080px){
-                    margin-bottom: 1vh;
-                }
-
-                dt {
-                    margin-bottom: 1vh;
-                    font-weight: 700;
-                }
+            @media(max-width: 480px) {
+                font-size: 13px;
             }
         }
     }
+
+    .pi_right {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @media(max-width: 1200px) {
+            width: 100%;
+        }
+
+        dl {
+            width: 50%;
+            margin-bottom: 4vh;
+            transform : rotate(0.04deg); 
+
+            @media(max-width: 1200px) {
+                margin-bottom: 1vh;
+            }
+
+            dt {
+                margin-bottom: 1vh;
+                font-weight: 700;
+                
+            }
+        }
+    }
+
 }
 </style>

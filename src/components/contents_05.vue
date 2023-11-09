@@ -6,32 +6,32 @@
     <section id="contents__05" class="contents__05__wrap">
         <div class="contents__05__inner">
 
-            <div class="ct__img__05_00">    
+            <div class="ct__img__05_00 growBig">    
                 <picture>
                     <!-- <source media="(max-width: 800px)" :srcset="contData05[7]"> -->
                     <img :src="contData05[0]" alt="콘텐츠 이미지 00">
                 </picture>
             </div>
 
-            <div class="ct__img__05_01">    
+            <div class="ct__img__05_01 growBig">    
                 <picture>
                     <img :src="contData05[1]" alt="콘텐츠 이미지 01">
                 </picture>
             </div>
 
-            <div class="ct__img__05_02">    
+            <div class="ct__img__05_02 growBig">    
                 <picture>
                     <img :src="contData05[2]" alt="콘텐츠 이미지 02">
                 </picture>
             </div>
 
-            <div class="ct__img__05_03">    
+            <div class="ct__img__05_03 growBig">    
                 <picture>
                     <img :src="contData05[3]" alt="콘텐츠 이미지 03">
                 </picture>
             </div>
 
-            <div class="ct__img__05_04">    
+            <div class="ct__img__05_04 growBig">    
                 <picture>
                     <img :src="contData05[4]" alt="콘텐츠 이미지 04">
                 </picture>
@@ -53,38 +53,21 @@
         methods: {
             animation05() {
 
-                gsap.from(".ct__img__05_00", {
-                    autoAlpha: 0,
-                    y: 100,
-                    scrollTrigger: {
-                    trigger: ".ct__img__05_00",
-                    start: "top bottom",
-                    end: "+=500px",
-                    scrub: 1,
-                    }
-                });
+            
 
-                gsap.from(".ct__img__05_01", {
-                    autoAlpha: 0,
-                    y: 100,
-                    scrollTrigger: {
-                    trigger: ".ct__img__05_01",
-                    start: "top bottom",
-                    end: "+=500px",                    
-                    scrub: 1,
-                    }
-                });
-
-                gsap.from(".ct__img__05_02", {
-                    autoAlpha: 0,
-                    y: 100,
-                    scrollTrigger: {
-                    trigger: ".ct__img__05_02",
-                    start: "top bottom",
-                    end: "+=500px",
-                    scrub: 1,
-                    }
-                });
+                for (let i = 0; i < 3; i++) {
+                    const yAnimation = `.ct__img__05_0${i}`;
+                    gsap.from(yAnimation, {
+                        autoAlpha: 0,
+                        y: 100,
+                        scrollTrigger: {
+                        trigger: yAnimation,
+                        start: "top bottom",
+                        end: `+=500px`,
+                        scrub: 1,
+                        }
+                    });
+                }
 
                 gsap.from(".ct__img__05_03", {
                     autoAlpha: 0,
@@ -107,6 +90,17 @@
                     scrub: 1,
                     }
                 });
+
+
+                const growBigImg = document.querySelectorAll(".growBig");
+                growBigImg.forEach( img => {
+                    img.addEventListener("mouseover", () => {
+                        gsap.to(img, { scale: 1.015 });
+                    });
+                    img.addEventListener("mouseleave", () => {
+                        gsap.to(img, { scale: 1 });
+                    });
+                })
 
             }
         }
@@ -135,55 +129,55 @@
     
     .ct__img__05_00 {      
                             // $width, $left, $margin-top, $border-radius
-        @include cont01-img-style(18%, 62%, 10%, 20px);
+        @include common-img-style(18%, 62%, 10%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 13%, 177%, 20px);
+            @include common-img-style(40%, 13%, 177%, 20px);
         }
     }
     
     .ct__img__05_01 {      
-        @include cont01-img-style(18%, 20%, 14%, 20px);
+        @include common-img-style(18%, 20%, 14%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 30%, 27%, 20px);
+            @include common-img-style(40%, 30%, 27%, 20px);
         }
 
     }
     
     .ct__img__05_02 {      
-        @include cont01-img-style(18%, 41%, 27%, 20px);
+        @include common-img-style(18%, 41%, 27%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 47%, 116%, 20px);
+            @include common-img-style(40%, 47%, 116%, 20px);
         }
 
     }
     
     .ct__img__05_03 {      
-        @include cont01-img-style(22%, 5.2%, 21.5%, 20px);
+        @include common-img-style(22%, 5.2%, 21.5%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(55%, -9%, 38%, 20px);
+            @include common-img-style(55%, -9%, 38%, 20px);
         }
 
     }
     
     .ct__img__05_04 {      
-        @include cont01-img-style(26%, 67%, 29%, 20px);
+        @include common-img-style(26%, 67%, 29%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(54%, 38.3%, 205%, 20px);
+            @include common-img-style(54%, 38.3%, 205%, 20px);
         }
 
     }

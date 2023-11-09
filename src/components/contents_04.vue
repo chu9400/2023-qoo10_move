@@ -12,13 +12,13 @@
                     <img :src="contData04[0]" alt="콘텐츠 이미지 00">
                 </picture>
             </div>
-            <div class="ct__img__04_01">    
+            <div class="ct__img__04_01 growBig" >    
                 <picture>
                     <img :src="contData04[1]" alt="콘텐츠 이미지 01">
                 </picture>
             </div>
 
-            <div class="ct__img__04_02">    
+            <div class="ct__img__04_02 growBig">    
                 <picture>
                     <img :src="contData04[2]" alt="콘텐츠 이미지 02">
                 </picture>
@@ -156,6 +156,16 @@
                     
                 });
                 // 좋아요 애니메이션 end
+
+                const growBigImg = document.querySelectorAll(".growBig");
+                growBigImg.forEach( img => {
+                    img.addEventListener("mouseover", () => {
+                        gsap.to(img, { scale: 1.015 });
+                    });
+                    img.addEventListener("mouseleave", () => {
+                        gsap.to(img, { scale: 1 });
+                    });
+                })
                
             }
         }
@@ -184,80 +194,80 @@
     
     .ct__img__04_00 {      
                             // $width, $left, $margin-top, $border-radius
-        @include cont01-img-style(23%, 23%, 10%, 20px);
+        @include common-img-style(23%, 23%, 10%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(47%, 25%, 28%, 20px);
+            @include common-img-style(47%, 25%, 28%, 20px);
         }
     }
 
     .ct__img__04_01 {      
-        @include cont01-img-style(17%, 30%, 21%, 20px);
+        @include common-img-style(17%, 30%, 21%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(35%, 40%, 50%, 20px);
+            @include common-img-style(35%, 40%, 50%, 20px);
         }
     }
 
     .ct__img__04_02 {      
-        @include cont01-img-style(18%, 61%, 37%, 20px);
+        @include common-img-style(18%, 61%, 37%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 45%, 128%, 20px);
+            @include common-img-style(40%, 45%, 128%, 20px);
         }
     }
 
     .ct__img__04_03 {      
-        @include cont01-img-style(18%, 46.5%, 58.5%, 20px);
+        @include common-img-style(18%, 46.5%, 58.5%, 20px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 14%, 153%, 20px);
+            @include common-img-style(40%, 14%, 153%, 20px);
         }
     }
 
     .ct__img__04_04 {      
-        @include cont01-img-style(5%, 19%, 33%, 0px);
+        @include common-img-style(5%, 19%, 33%, 0px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(12%, 16%, 77%, 0px);
+            @include common-img-style(12%, 16%, 77%, 0px);
         }
     }
 
     .ct__img__04_05 {      
-        @include cont01-img-style(17%, 77%, 6%, 0px);
+        @include common-img-style(17%, 77%, 6%, 0px);
         position: absolute;
         top: 0;
 
         @media(max-width: 800px) {
-            @include cont01-img-style(25%, 66%, -1%, 0px);
+            @include common-img-style(25%, 66%, -1%, 0px);
         }
     }
 
     .ct__img__04_06 {      
-        @include cont01-img-style(10%, 0%, 65%, 0px);
+        @include common-img-style(10%, 0%, 65%, 0px);
         position: absolute;
         top: 0;
         @media(max-width: 800px) {
-            @include cont01-img-style(18%, 0%, 119%, 0px);
+            @include common-img-style(18%, 0%, 119%, 0px);
         }
     }
 
     .ct__img__04_07 {      
-        @include cont01-img-style(26%, 10%, 77%, 20px);
+        @include common-img-style(26%, 10%, 77%, 20px);
         position: absolute;
         top: 0;
         @media(max-width: 800px) {
-            @include cont01-img-style(40%, 70%, 215%, 20px);
+            @include common-img-style(40%, 70%, 215%, 20px);
         }
     }
 

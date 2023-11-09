@@ -7,20 +7,24 @@
   import contents_03 from "@/components/contents_03.vue";
   import contents_04 from "@/components/contents_04.vue";
   import contents_05 from "@/components/contents_05.vue";
+  import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
+  
   <Skip />
   <Header />
 
   <main id="main" role="main">
-    <ProjectInfo />
+    <ProjectInfo /> 
     <contents_01 />
     <contents_02 />
     <contents_03 />
     <contents_04 />
     <contents_05 />
   </main>
+
+  <Footer />
 
 </template>
 

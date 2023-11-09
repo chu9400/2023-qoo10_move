@@ -11,10 +11,10 @@ import {logoImg} from "../constants/index.js";
             </video>
 
             <div class="logo__inner">
-                <figure>
+                <figure class="growBig">
                     <img :src="logoImg" alt="로고">
                 </figure>
-                <p>app & web ux design</p>
+                <p class="growBig">app & web ux design</p>
             </div>
         </div>
     </header>
@@ -53,12 +53,16 @@ import {logoImg} from "../constants/index.js";
         }
         
         p {
-            margin-top: 3vh;
+            margin-top: 50px;
             color: #fff;
             font-size: clamp(15px, 12px + 0.83vw, 24px);
             font-weight: 700;
             line-height: 1;
             text-align: center;
+
+            @media (max-width:480px) {
+                margin-top: 20px;
+            }
         }
     }
 </style>

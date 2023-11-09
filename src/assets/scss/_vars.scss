@@ -1,5 +1,5 @@
 :root {
-    --main-font: "inter tight";
+    --main-font: 'Inter Tight', 'Noto Sans KR', sans-serif;
 
     --mainBg-color: #fff;
 
@@ -7,6 +7,7 @@
     --black: #000;
   
     font-family: var(--main-font);
+    
     font-size: 16px;
     line-height: 1.5;
     font-weight: 400;
@@ -29,7 +30,8 @@ body {
 
 
 // 콘텐츠01 이미지 공통 스타일
-@mixin cont01-img-style($width, $left, $margin-top, $radius) {
+
+@mixin common-img-style($width, $left, $margin-top, $radius) {
     
     width: $width;
     display: block;
