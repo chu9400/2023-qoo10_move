@@ -31,9 +31,11 @@
 <style lang="scss">
 
 #main {
-  max-width: 1920px;
+  width: 100%;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  background-color: #fff;
 }
 
 </style>

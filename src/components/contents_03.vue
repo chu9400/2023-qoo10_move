@@ -123,6 +123,8 @@
     width: 100%;
     background: url("@/assets/img/cont03/contents_03_bg.jpg") no-repeat center / cover;
     overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .contents__03__inner {

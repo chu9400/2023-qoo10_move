@@ -148,6 +148,8 @@ export default {
 @import "../assets/scss/vars.scss";
 
 .contents__01__wrap {
+    max-width: 1920px;
+    margin: 0 auto;
     width: 100%;
     background: url("@/assets/img/cont01/contents_01_bg.jpg") no-repeat center / cover;
     overflow: hidden;

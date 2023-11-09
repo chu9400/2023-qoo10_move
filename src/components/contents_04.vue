@@ -181,6 +181,8 @@
     width: 100%;
     background: url("@/assets/img/cont04/contents_04_bg.jpg") no-repeat center / cover;
     overflow: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .contents__04__inner {
