@@ -6,7 +6,7 @@
     <section id="contents__01" class="contents__01__wrap">
         <div class="contents__01__inner">
             <div class="ct__img__01 reveal">
-                <picture>
+            <picture>
                 <source media="(max-width: 800px)" :srcset="contData01[7]">
                 <img :src="contData01[0]" alt="콘텐츠 이미지 01">
             </picture>

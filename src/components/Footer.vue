@@ -25,8 +25,6 @@
             text-align: center;
             padding: 15px 15px;
             font-size: 12px;
-
-            
         }
     }
 

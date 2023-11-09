@@ -16,6 +16,16 @@ https://chu9400-qoo10move.netlify.app/
 - github(https://github.com/) 을 사용하여 파일을 관리합니다.
 - HTML, CSS 기반으로 웹 표준 및 웹 접근성을 준수하여 작업합니다.
 
+## 새로 학습한 사항
+- picture 태그로 간단하게 반응형 이미지 교체 기능.
+- padding-top으로 height값 주기.
+- 비슷한 스타일을 발견하면 mixin으로 통합하기.
+- 폰트 안티엘리어싱
+- 고해상도에서 레이아웃 구조 깨지지 않게하기.
+- 간단한 svg 애니메이션.
+- gsap의 yoyo 기능.
+
+
 ## 프로젝트 실행
 - vue를 설치합니다. `npm init vue@latest`
 - sass를 설치합니다. `npm install sass`
