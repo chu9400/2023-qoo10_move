@@ -94,7 +94,7 @@ figcaption {
 #skip a {
     position: absolute;
     left: 10px;
-    top: -92px;
+    top: -100px;
     z-index: 100000;
     font-size: 1rem;
     padding: 10px 30px;
@@ -103,5 +103,5 @@ figcaption {
 }
 #skip a:focus,
 #skip a:active {
-    top: 10px;
+    top: 15px;
 }
