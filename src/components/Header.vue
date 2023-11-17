@@ -25,31 +25,6 @@ import {logoImg} from "../constants/index.js";
     
 </template>
 
-<!-- <script>
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
-export default{
-    mounted : function() {
-        this.animation();
-    },  
-    methods: {
-        animation() {
-            /* 마우스 이펙트 */
-            document.addEventListener("mousemove", (e)=>{
-                gsap.to(".cursor", {
-                    duration:1,
-                    left: e.pageX - 100,
-                    top: e.pageY - 100,        
-                })
-            })
-        }
-    }
-}
-
-</script> -->
-
 <script>
 import gsap from "gsap";
 
@@ -63,10 +38,11 @@ export default {
     },
     handleMouseMove(event) {
       const cursor = document.querySelector(".cursor");
-
+    
       if (cursor) {
-        const left = event.pageX - 100;
-        const top = event.pageY - 100;
+        
+        const left = event.pageX;
+        const top = event.pageY;
 
         gsap.to(cursor, {
           duration: 0.8,
@@ -87,8 +63,8 @@ export default {
     .cursor {
         position: absolute;
         left: 50%; top: 50%;
-        width: 200px;
-        height: 200px;
+        width: 70px;
+        height: 70px;
         transform: translate(-50%, -50%);
         border-radius: 50%;
         z-index: 9999;
@@ -96,7 +72,8 @@ export default {
         user-select: none;
         pointer-events: none;
         transition: transform 0.3s;
-        mix-blend-mode: soft-light;
+        /* mix-blend-mode: soft-light; */
+        mix-blend-mode: difference;
         box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
         
     }

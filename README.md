@@ -24,6 +24,7 @@ https://chu9400-qoo10move.netlify.app/
 - 고해상도에서 레이아웃 구조 깨지지 않게하기.
 - 간단한 svg 애니메이션.
 - gsap의 yoyo 기능.
+- 마우스 이펙트 기능
 
 
 ## 프로젝트 실행
