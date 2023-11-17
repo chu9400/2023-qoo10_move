@@ -12,8 +12,6 @@
             </picture>
             </div>
 
-            
-
             <div class="ct__img__02 reveal growBig">
                 <figure>
                     <img :src="contData01[1]" alt="콘텐츠 이미지 02">
@@ -71,7 +69,7 @@ export default {
     },
     methods: {
         animation() {
-
+            
             gsap.from(".ct__img__01", {
                 autoAlpha:0,
                 y: 100,

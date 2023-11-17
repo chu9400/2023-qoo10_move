@@ -3,7 +3,7 @@ import {logoImg} from "../constants/index.js";
 </script>
 
 <template>
-    <header id="header">
+    <header id="header" ref="header">
         <div class="nullDiv"></div>
         <div class="video__inner">
             <video muted loop autoplay> <!-- autoplay -->
@@ -18,10 +18,90 @@ import {logoImg} from "../constants/index.js";
             </div>
         </div>
     </header>
+
+    <!-- 마우스 이펙트 -->
+    <div class="cursor"></div>
+    <!-- 마우스 이펙트 end-->
     
 </template>
 
+<!-- <script>
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+export default{
+    mounted : function() {
+        this.animation();
+    },  
+    methods: {
+        animation() {
+            /* 마우스 이펙트 */
+            document.addEventListener("mousemove", (e)=>{
+                gsap.to(".cursor", {
+                    duration:1,
+                    left: e.pageX - 100,
+                    top: e.pageY - 100,        
+                })
+            })
+        }
+    }
+}
+
+</script> -->
+
+<script>
+import gsap from "gsap";
+
+export default {
+  mounted() {
+    this.addMousemoveListener();
+  },
+  methods: {
+    addMousemoveListener() {
+      document.addEventListener("mousemove", this.handleMouseMove);
+    },
+    handleMouseMove(event) {
+      const cursor = document.querySelector(".cursor");
+
+      if (cursor) {
+        const left = event.pageX - 100;
+        const top = event.pageY - 100;
+
+        gsap.to(cursor, {
+          duration: 0.8,
+          left,
+          top
+        });
+      }
+    }
+  }
+};
+</script>
+
 <style lang="scss">
+    body {
+        cursor: none;
+    }
+
+    .cursor {
+        position: absolute;
+        left: 50%; top: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        background-color: #fff;
+        user-select: none;
+        pointer-events: none;
+        transition: transform 0.3s;
+        mix-blend-mode: soft-light;
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+        
+    }
+
+
     .nullDiv {
         width: 100%;
         height: 100vh;
