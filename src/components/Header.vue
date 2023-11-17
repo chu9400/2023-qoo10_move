@@ -45,7 +45,7 @@ export default {
         const top = event.pageY;
 
         gsap.to(cursor, {
-          duration: 0.8,
+          duration: 1,
           left,
           top
         });
@@ -72,9 +72,7 @@ export default {
         user-select: none;
         pointer-events: none;
         transition: transform 0.3s;
-        /* mix-blend-mode: soft-light; */
-        mix-blend-mode: difference;
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.5);
+        mix-blend-mode: soft-light;
         
     }
 
